@@ -27,6 +27,15 @@ body {
   height: 70vh;
 }
 
+
+.tasksContainer:empty {
+  height: 35vh;
+}
+
+.tasksContainer:empty ~ .notasks {
+  display: flex;
+}
+
 .notasks {
   display: flex;
   align-items: center;
