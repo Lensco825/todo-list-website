@@ -23,8 +23,9 @@ body {
 }
 
 .tasksContainer {
-  width: 100%;
+  width: 80%;
   height: 70vh;
+  border: solid;
 }
 
 
