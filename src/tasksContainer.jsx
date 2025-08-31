@@ -12,10 +12,11 @@ function TasksContainer() {
     <h2>Good morning</h2>
     <p>Here are your tasks for today</p>
       <form>
-        <input type="text" placeholder="Bit of a placeholder..." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)}/>
+        <input type="text" minLength="3" maxLength="96" placeholder="Bit of a placeholder..." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)}/>
         <label for="#taskInput" className="taskEnterBtn" onClick={() => {
           setTask([...tasks, {info: info}])
-        }}><ion-icon name="send"></ion-icon></label>
+          document.querySelector('#taskInput').value = '';        
+          }}><ion-icon name="send"></ion-icon></label>
       </form>
         </div>
 
@@ -24,6 +25,11 @@ function TasksContainer() {
           <div className="task">
           <input type="checkbox"/>
           <label>{task.info}</label>
+          <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
+            task.style.backgroundColor = 'peach';
+            // tasks.pop(task);
+            // document.querySelector('.taskContainer').removeChild(task);
+          }}></ion-icon>
           </div>
         ))}
       </div>

@@ -144,12 +144,42 @@ label ion-icon {
   font-weight: light;
 }
 
+.task {
+  height: 60px;
+  transition: 0.3s;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.task:hover {
+  background-color: lightgrey;
+}
 
 .task input[type="checkbox"] {
   width: 50px;
 }
 
+.task input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+
+}
+
 .task label {
   font-family: Playfair Display;
   font-size: 1.2rem;
+}
+
+.deleteBtn {
+  font-size: 1.5rem;
+  position: relative;
+  align-self: flex-end;
+  z-index: 2;
+  padding: 10px;
+  transition: 200ms;
+  border-radius: 10px;
+}
+
+.deleteBtn:hover {
+  background-color: red;
 }
