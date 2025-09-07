@@ -1,6 +1,12 @@
 import { useState } from "react";
 
 
+function removeTask(el) {
+  el.style.backgroundColor = "red";
+  task.pop(el);
+  document.getElementsByClassName('tasksContainer').removeChild(el);
+}
+
 function TasksContainer() {
   const [info, setInfo] = useState('');
   const [tasks, setTask] = useState([]);
@@ -23,13 +29,11 @@ function TasksContainer() {
       <div className="tasksContainer">
       {tasks.map(task => (
           <div className="task">
+          <div className="textHalf">
           <input type="checkbox"/>
           <label>{task.info}</label>
-          <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
-            task.style.backgroundColor = 'peach';
-            // tasks.pop(task);
-            // document.querySelector('.taskContainer').removeChild(task);
-          }}></ion-icon>
+          </div>
+          <ion-icon class="deleteBtn" name="trash-outline"></ion-icon>
           </div>
         ))}
       </div>
