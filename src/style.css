@@ -55,9 +55,13 @@ h2, p {
 }
 
 .tasksContainer {
-  width: 600px;
+  max-width: 750px;
   height: 70vh;
   margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  border: solid;
+  gap: 10px;
 }
 
 
@@ -69,7 +73,7 @@ h2, p {
   display: flex;
 }
 
-.notasks {
+/* .notasks {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +85,7 @@ h2, p {
   margin-bottom: 20px;
   font-family: Poppins;
   text-align: center;
-}
+} */
 
 form {
   display: flex;
@@ -160,7 +164,7 @@ input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid;
+  width: 635px;
 }
 
 .task:hover {
@@ -173,7 +177,7 @@ input[type="checkbox"] {
 
 .task input[type="checkbox"]:checked + label {
   text-decoration: line-through;
-
+font-style: italic;
 }
 
 .task label {
