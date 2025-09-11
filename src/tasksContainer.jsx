@@ -33,7 +33,9 @@ function TasksContainer() {
           <input type="checkbox"/>
           <label>{task.info}</label>
           </div>
-          <ion-icon class="deleteBtn" name="trash-outline"></ion-icon>
+          <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
+            document.querySelector('.task').remove()
+          }}></ion-icon>
           </div>
         ))}
       </div>
