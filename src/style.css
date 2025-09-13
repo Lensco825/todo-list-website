@@ -9,6 +9,11 @@ body {
   height: 100%;
 }
 
+:root {
+  --fallOrange: #DC965A;
+  --fallDarkBrown: #242325;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -16,7 +21,7 @@ body {
 }
 
 .navbar {
-  display: flex;
+  display: none;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
@@ -35,11 +40,10 @@ body {
 }
 
 h2, p {
-  font-family: playfair display;
+  font-family: Inter;
   margin: 0;
   margin-top: 5px;
 }
-
 
 
 
@@ -56,6 +60,7 @@ h2, p {
 
 .tasksContainer {
   max-width: 750px;
+  min-width: 300px;
   height: 70vh;
   margin-top: 5px;
   display: flex;
@@ -105,11 +110,11 @@ form #taskInput {
   background-color: transparent;
   border: solid 1px;
   margin-left: 15px;
+  padding-left: 15px;
 }
 
 form #taskInput::placeholder {
   font-family: Poppins;
-  padding-left: 10px;
 }
 
 form label {
@@ -165,6 +170,18 @@ input[type="checkbox"] {
   align-items: center;
   width: 635px;
   overflow-x: hidden;
+  animation: appear 0.3s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-);
+  }
 }
 
 .task:hover {
@@ -198,5 +215,26 @@ input[type="checkbox"] {
 }
 
 .deleteBtn:hover {
-  background-color: red;
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .taskInputContainer {
+    width: 400px;
+    justify-self: center;
+    border: solid;
+  }
+  .tasksContainer {
+    width: 445px;
+    justify-self: center;
+    overflow: hidden;
+  }
+  .tasks {
+    overflow: hidden;
+    width: 100%;
+    
+  }
+  .tasks .textHalf {
+    overflow: hidden;
+  }
 }
