@@ -217,24 +217,3 @@ input[type="checkbox"] {
 .deleteBtn:hover {
   color: red;
 }
-
-@media (max-width: 600px) {
-  .taskInputContainer {
-    width: 400px;
-    justify-self: center;
-    border: solid;
-  }
-  .tasksContainer {
-    width: 445px;
-    justify-self: center;
-    overflow: hidden;
-  }
-  .tasks {
-    overflow: hidden;
-    width: 100%;
-    
-  }
-  .tasks .textHalf {
-    overflow: hidden;
-  }
-}

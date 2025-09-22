@@ -1,0 +1,42 @@
+@media (max-width: 600px) {
+    .taskInputContainer {
+      min-width: 200px;
+      max-width: 400px;  
+      justify-self: center;
+      border: solid;
+    }
+    .tasksContainer {
+      width: 445px;
+      justify-self: center;
+      overflow: hidden;
+    }
+    .tasks {
+      overflow: hidden;
+      width: 100%;
+      
+    }
+    .tasks .textHalf {
+      overflow: hidden;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .taskInputContainer {
+        max-width: 250px;
+        color: red;
+        font-size: 90%;
+    }
+    form #taskInput {
+        width: 500px;
+        font-family: Playfair Display;
+    }
+    .taskInputContainer .taskEnterBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .taskEnterBtn ion-icon {
+        font-size: 1rem;
+    }
+  }
