@@ -69,28 +69,6 @@ h2, p {
 }
 
 
-.tasksContainer:empty {
-  height: 35vh;
-}
-
-.tasksContainer:empty ~ .notasks {
-  display: flex;
-}
-
-/* .notasks {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0;
-}
-
-.notasks p {
-  margin-bottom: 20px;
-  font-family: Poppins;
-  text-align: center;
-} */
-
 form {
   display: flex;
   align-items: center;
