@@ -168,7 +168,7 @@ input[type="checkbox"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 635px;
+  max-width: 635px;
   overflow-x: hidden;
   animation: appear 0.3s;
 }
