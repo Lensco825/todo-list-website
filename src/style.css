@@ -91,6 +91,10 @@ form #taskInput {
   padding-left: 15px;
 }
 
+#taskInput {
+  padding-right: 42px;
+}
+
 form #taskInput::placeholder {
   font-family: Poppins;
 }

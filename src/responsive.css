@@ -20,6 +20,13 @@
       display: flex;
       align-items: center;
     }
+    #taskInput {
+      padding-right: 36px;
+    }
+    form label {
+      padding: 1.5px;
+      border-radius: 25px;
+    }
   }
 
   @media (max-width: 510px) {
@@ -33,6 +40,7 @@
         width: 200px;
         font-family: Playfair Display;
     }
+
     .taskInputContainer .taskEnterBtn {
         display: flex;
         align-items: center;
@@ -55,4 +63,14 @@
     .tasks {
       width: 310px;
     }
+    form label {
+      width: 50px;
+      background-color: red;
   }
+  form {
+    margin-left: 5px;
+  }
+  .taskEnterBtn {
+    padding: 0 8px 0 8px;
+  }
+}

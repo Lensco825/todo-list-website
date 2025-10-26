@@ -15,13 +15,13 @@ function TasksContainer() {
     <>
 
     <div className="taskInputContainer">
-    <h2>Good morning</h2>
+    <h2>Hello!</h2>
     <p>Here are your tasks for today</p>
       <form>
         <input type="text" minLength="3" maxLength="96" placeholder="Bit of a placeholder..." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)}/>
         <label for="#taskInput" className="taskEnterBtn" onClick={() => {
           setTask([...tasks, {info: info}])
-          document.querySelector('#taskInput').value = '';        
+          document.querySelector('#taskInput').value = "";        
           }}><ion-icon name="send"></ion-icon></label>
       </form>
         </div>
