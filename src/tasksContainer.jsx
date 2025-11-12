@@ -1,5 +1,23 @@
 import { useState } from "react";
 
+let greeting = "Hello!";
+
+function chooseGreeting() {
+  const date = new Date();
+  const hour = date.getHours();
+  if (hour >= 5) {
+    greeting = "Good Morning";
+  }
+  if (hour > 12) {
+    greeting = "Good Afternoon"
+  }
+  if (hour > 17) {
+    greeting = "Good Evening";
+  }
+}
+
+chooseGreeting();
+
 
 function removeTask(el) {
   el.style.backgroundColor = "red";
@@ -15,10 +33,10 @@ function TasksContainer() {
     <>
 
     <div className="taskInputContainer">
-    <h2>Hello!</h2>
+    <h2>{greeting}</h2>
     <p>Here are your tasks for today</p>
       <form>
-        <input type="text" minLength="3" maxLength="96" placeholder="Bit of a placeholder..." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)}/>
+        <input type="text" minLength="3" maxLength="96" placeholder="Plan your goals here! You got this." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)}/>
         <label for="#taskInput" className="taskEnterBtn" onClick={() => {
           setTask([...tasks, {info: info}])
           document.querySelector('#taskInput').value = "";        
