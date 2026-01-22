@@ -199,3 +199,18 @@ input[type="checkbox"] {
 .deleteBtn:hover {
   color: red;
 }
+
+.TimeImg {
+  position: absolute;
+  z-index: -2;
+  width: 300px;
+  top: 2px;
+  left: 42%;
+  animation: rise 1000ms ease-out;
+}
+
+@keyframes rise {
+  from {
+    top: 90px;
+  }
+}

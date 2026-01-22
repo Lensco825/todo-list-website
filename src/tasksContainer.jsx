@@ -35,6 +35,7 @@ function TasksContainer() {
     <div className="taskInputContainer">
     <h2>{greeting}</h2>
     <p>Here are your tasks for today</p>
+    <img src="assets/sun.png" alt="sun" class="TimeImg"/>
       <form>
         <input type="text" minLength="3" maxLength="96" placeholder="Plan your goals here! You got this." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)}/>
         <label for="#taskInput" className="taskEnterBtn" onClick={() => {
