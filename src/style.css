@@ -116,6 +116,17 @@ label ion-icon {
   justify-self: center;
 }
 
+.taskButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.taskButtons ion-icon {
+  cursor: pointer;
+}
+
 .taskEnterBtn {
   color: white;
   background-color: black;
@@ -187,7 +198,6 @@ input[type="checkbox"] {
 
 .deleteBtn {
   cursor: pointer;
-  font-size: 1.5rem;
   position: relative;
   justify-self: flex-end;
   z-index: 4;

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TaskButtons from './buttons.jsx';
 
 let greeting = "Hello!";
 
@@ -51,11 +52,9 @@ function TasksContainer() {
           <div className="task">
           <div className="textHalf">
           <input type="checkbox"/>
-          <label>{task.info}</label>
+          <label className="taskContent" contentEditable="false">{task.info}</label>
           </div>
-          <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
-            document.querySelector('.task').remove()
-          }}></ion-icon>
+          <TaskButtons />
           </div>
         ))}
       </div>
