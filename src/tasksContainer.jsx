@@ -2,6 +2,7 @@ import { useState } from "react";
 import TaskButtons from './buttons.jsx';
 
 let greeting = "Hello!";
+let index;
 
 function chooseGreeting() {
   const date = new Date();
@@ -49,12 +50,25 @@ function TasksContainer() {
 
       <div className="tasksContainer">
       {tasks.map(task => (
-          <div className="task">
+          <div className="task" id={"task" }>
           <div className="textHalf">
           <input type="checkbox"/>
           <label className="taskContent" contentEditable="false">{task.info}</label>
           </div>
-          <TaskButtons />
+          <div class="taskButtons">
+            <ion-icon name="create-outline" onClick={() => {
+                index = tasks.indexOf(task);
+                if (document.querySelectorAll(".taskContent")[index].getAttribute("contentEditable") === "false") {
+                  document.querySelectorAll(".taskContent")[index].setAttribute("contentEditable", "true");
+                } else {
+                  document.querySelectorAll(".taskContent")[index].setAttribute("contentEditable", "false");
+                }
+            }}></ion-icon>
+            <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
+                index = tasks.indexOf(task);
+                document.querySelectorAll('.task')[index].remove();
+            }}></ion-icon>
+        </div>
           </div>
         ))}
       </div>
