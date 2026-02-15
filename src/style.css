@@ -109,6 +109,10 @@ form label {
   cursor: pointer;
 }
 
+.editing {
+  border: dotted 1px;
+}
+
 label ion-icon {
   font-size: 23px;
   display: flex;
