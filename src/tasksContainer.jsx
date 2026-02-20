@@ -21,12 +21,6 @@ function chooseGreeting() {
 chooseGreeting();
 
 
-function removeTask(el) {
-  el.style.backgroundColor = "red";
-  task.pop(el);
-  document.getElementsByClassName('tasksContainer').removeChild(el);
-}
-
 function TasksContainer() {
   const [info, setInfo] = useState('');
   const [tasks, setTask] = useState([]);
@@ -38,9 +32,14 @@ function TasksContainer() {
         <h2>{greeting}</h2>
         <p>Here are your tasks for today</p>
         <img src="assets/sun.png" alt="sun" class="TimeImg" />
-        <form>
+        <form onSubmit={(e) =>{
+          e.preventDefault()
+          setTask([...tasks, { info: info }])
+          document.querySelector('#taskInput').value = null;
+          setInfo("");
+        }}>
           <input type="text" minLength="3" maxLength="96" placeholder="Plan your goals here! You got this." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)} />
-          <label for="#taskInput" className="taskEnterBtn" onClick={() => {
+          <label for="#taskInput" type="submit" className="taskEnterBtn" onClick={(e) => {
             setTask([...tasks, { info: info }])
             document.querySelector('#taskInput').value = null;
             setInfo("");
