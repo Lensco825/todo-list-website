@@ -109,11 +109,26 @@ form label {
   cursor: pointer;
 }
 
+.editing {
+  border: dotted 1px;
+}
+
 label ion-icon {
   font-size: 23px;
   display: flex;
   align-items: center;
   justify-self: center;
+}
+
+.taskButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.taskButtons ion-icon {
+  cursor: pointer;
 }
 
 .taskEnterBtn {
@@ -187,7 +202,6 @@ input[type="checkbox"] {
 
 .deleteBtn {
   cursor: pointer;
-  font-size: 1.5rem;
   position: relative;
   justify-self: flex-end;
   z-index: 4;
