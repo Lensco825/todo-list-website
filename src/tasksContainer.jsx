@@ -34,15 +34,19 @@ function TasksContainer() {
         <img src="assets/sun.png" alt="sun" class="TimeImg" />
         <form onSubmit={(e) =>{
           e.preventDefault()
+           if (document.getElementById("taskInput").value.trim() !== "") {
           setTask([...tasks, { info: info }])
           document.querySelector('#taskInput').value = null;
           setInfo("");
+           }
         }}>
           <input type="text" minLength="3" maxLength="96" placeholder="Plan your goals here! You got this." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)} />
-          <label for="#taskInput" type="submit" className="taskEnterBtn" onClick={(e) => {
+          <label for="#taskInput" type="submit" className="taskEnterBtn" onClick={() => {
+            if (document.getElementById("taskInput").value.trim() !== "") {
             setTask([...tasks, { info: info }])
             document.querySelector('#taskInput').value = null;
             setInfo("");
+            }
           }}><ion-icon name="send"></ion-icon></label>
         </form>
       </div>
