@@ -30,7 +30,7 @@ function TasksContainer() {
 
       <div className="taskInputContainer">
         <h2>{greeting}</h2>
-        <p>Here are your tasks for today</p>
+        <p>{tasks.length > 0 ? "Here are your tasks for today" : "No tasks yet, Good Job!"}</p>
         <img src="assets/sun.png" alt="sun" class="TimeImg" />
         <form onSubmit={(e) =>{
           e.preventDefault()
