@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState, useEffect} from "react";
 import TaskButtons from './buttons.jsx';
 
 let greeting = "Hello!";
@@ -22,8 +22,13 @@ chooseGreeting();
 
 
 function TasksContainer() {
-  const [info, setInfo] = useState('');
-  const [tasks, setTask] = useState([]);
+  const [info, setInfo] = useState();
+  const [tasks, setTask] = useState(() => {
+    const savedTasks = localStorage.getItem("savedTasks");
+    return savedTasks !== null ? JSON.parse(savedTasks) : [];
+  });
+
+
 
   return (
     <>
@@ -39,6 +44,7 @@ function TasksContainer() {
           document.querySelector('#taskInput').value = null;
           setInfo("");
            }
+           useEffect(localStorage.setItem("savedTasks", JSON.stringify(tasks)));
         }}>
           <input type="text" minLength="3" maxLength="96" placeholder="Plan your goals here! You got this." name="taskInput" id="taskInput" onChange={e => setInfo(e.target.value)} />
           <label for="#taskInput" type="submit" className="taskEnterBtn" onClick={() => {
@@ -75,12 +81,12 @@ function TasksContainer() {
                     document.querySelector(".taskContent").setAttribute("contentEditable", "false");
                   }
                 }
-
               }}></ion-icon>
               <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
                 index = tasks.indexOf(task);
                 tasks.splice(index, 1);
                 document.querySelectorAll('.task')[index].remove();
+                useEffect(localStorage.setItem("savedTasks", JSON.stringify(tasks)));
               }}></ion-icon>
             </div>
           </div>
