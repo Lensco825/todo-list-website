@@ -28,7 +28,7 @@ function TasksContainer() {
     return savedTasks !== null ? JSON.parse(savedTasks) : [];
   });
 
-
+useEffect(() => localStorage.setItem("savedTasks", JSON.stringify(tasks)));
 
   return (
     <>
@@ -80,6 +80,7 @@ function TasksContainer() {
                   } else {
                     document.querySelector(".taskContent").setAttribute("contentEditable", "false");
                   }
+                  useEffect(localStorage.setItem("savedTasks", JSON.stringify(tasks)));
                 }
               }}></ion-icon>
               <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
