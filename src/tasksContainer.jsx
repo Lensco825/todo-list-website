@@ -71,17 +71,20 @@ useEffect(() => localStorage.setItem("savedTasks", JSON.stringify(tasks)));
                 if (tasks.length > 1) {
                   if (document.querySelectorAll(".taskContent")[index].getAttribute("contentEditable") === "false") {
                     document.querySelectorAll(".taskContent")[index].setAttribute("contentEditable", "true");
+                    document.querySelectorAll(".taskContent")[index].focus();
                   } else {
                     document.querySelectorAll(".taskContent")[index].setAttribute("contentEditable", "false");
                   }
                 } else {
                   if (document.querySelector(".taskContent").getAttribute("contentEditable") === "false") {
                     document.querySelector(".taskContent").setAttribute("contentEditable", "true");
+                    document.querySelectorAll(".taskContent")[index].focus();
                   } else {
                     document.querySelector(".taskContent").setAttribute("contentEditable", "false");
                   }
-                  useEffect(localStorage.setItem("savedTasks", JSON.stringify(tasks)));
                 }
+                task.info = document.querySelectorAll(".taskContent")[index].textContent;
+                useEffect(localStorage.setItem("savedTasks", JSON.stringify(tasks)));
               }}></ion-icon>
               <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
                 index = tasks.indexOf(task);
