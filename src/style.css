@@ -11,7 +11,33 @@ body {
 
 body {
   padding-top: 30px;
+  /* background-color: #e5e5f7;
+  opacity: 0.9;
+  background-image: radial-gradient(#000000 1px, #e5e5f7 1px);
+  background-size: 20px 20px; */
+  /* https://grabient.com/HQVgzAHANKDsCcMQAYCMUC0rhldHs6GywATMvqvLDKajTgGxhSnCMQvKvDLwAsMXCCFoo2fqRFZQ8CEA?angle=225 */
+background-size: cover;
+background-repeat: no-repeat;
+background: linear-gradient(225deg, #abc8de 0.000%, #c7c9d8 16.667%, #e5cccf 33.333%, #ffd3c7 50.000%, #ffdbc2 66.667%, #ffe4c0 83.333%, #ffedc3 100.000%);
 }
+
+
+.glass-card {
+  width: 240px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 16px 8px rgba(255, 255, 255, 0.8);
+
+}
+
 
 :root {
   --fallOrange: #DC965A;
@@ -60,12 +86,19 @@ h2, p {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 16px 8px rgba(255, 255, 255, 0.8);
 }
 
 .tasksContainer {
   max-width: 750px;
   min-width: 300px;
-  height: 70vh;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -172,6 +205,7 @@ input[type="checkbox"] {
   max-width: 635px;
   overflow-x: hidden;
   animation: appear 0.3s;
+  background-color: white;
 }
 
 @keyframes appear {
@@ -186,7 +220,7 @@ input[type="checkbox"] {
 }
 
 .task:hover {
-  background-color: lightgrey;
+  background-color: rgb(238, 238, 238);
 }
 
 .task input[type="checkbox"] {
@@ -222,7 +256,7 @@ input[type="checkbox"] {
   position: absolute;
   z-index: -2;
   width: 300px;
-  top: 32px;
+  top: 10px;
   left: 0;
   right: 0;
   margin-left: auto;
