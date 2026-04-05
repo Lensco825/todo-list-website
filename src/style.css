@@ -78,7 +78,7 @@ h2, p {
 
 
 .taskInputContainer {
-  background-color: lightgray;
+  background-color: white;
   width: 600px;
   border-radius: 10px;
   margin-top: 130px;
@@ -86,14 +86,7 @@ h2, p {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.16);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 16px 8px rgba(255, 255, 255, 0.8);
+  
 }
 
 .tasksContainer {
@@ -205,7 +198,12 @@ input[type="checkbox"] {
   max-width: 635px;
   overflow-x: hidden;
   animation: appear 0.3s;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.30);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  
 }
 
 @keyframes appear {
@@ -256,7 +254,7 @@ input[type="checkbox"] {
   position: absolute;
   z-index: -2;
   width: 300px;
-  top: 10px;
+  top: 9.8px;
   left: 0;
   right: 0;
   margin-left: auto;
