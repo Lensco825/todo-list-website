@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react";
+import sun from "./sun.png";
 // import TaskButtons from './buttons.jsx';
 
 let greeting = "Hello!";
@@ -39,7 +40,7 @@ useEffect(() => localStorage.setItem("savedTasks", JSON.stringify(tasks)));
       <div className="taskInputContainer">
         <h2>{greeting}</h2>
         <p>{tasks.length > 0 ? "Here are your tasks for today" : "No tasks yet, Good Job!"}</p>
-        <img src="assets/sun.png" alt="sun" class="TimeImg" />
+        <img src={sun} alt="sun" class="TimeImg" />
         <form onSubmit={(e) =>{
           e.preventDefault()
            if (document.getElementById("taskInput").value.trim() !== "") {
