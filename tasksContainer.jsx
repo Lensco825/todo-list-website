@@ -39,7 +39,7 @@ useEffect(() => localStorage.setItem("savedTasks", JSON.stringify(tasks)));
       <div className="taskInputContainer">
         <h2>{greeting}</h2>
         <p>{tasks.length > 0 ? "Here are your tasks for today" : "No tasks yet, Good Job!"}</p>
-        <img src={sun} alt="sun" class="TimeImg" />
+        <img src={sun} alt="sun" className="TimeImg" />
         <form onSubmit={(e) =>{
           e.preventDefault()
            if (document.getElementById("taskInput").value.trim() !== "") {
@@ -67,7 +67,7 @@ useEffect(() => localStorage.setItem("savedTasks", JSON.stringify(tasks)));
               <input type="checkbox" />
               <label className="taskContent" contentEditable="false">{task.info}</label>
             </div>
-            <div class="taskButtons">
+            <div className="taskButtons">
               <ion-icon name="create-outline" onClick={() => {
                 index = tasks.indexOf(task);
                 document.querySelectorAll(".taskContent")[index].classList.toggle("editing");
@@ -89,7 +89,7 @@ useEffect(() => localStorage.setItem("savedTasks", JSON.stringify(tasks)));
                 task.info = document.querySelectorAll(".taskContent")[index].textContent;
                 useEffect(localStorage.setItem("savedTasks", JSON.stringify(tasks)));
               }}></ion-icon>
-              <ion-icon class="deleteBtn" name="trash-outline" onClick={() => {
+              <ion-icon className="deleteBtn" name="trash-outline" onClick={() => {
                 index = tasks.indexOf(task);
                 tasks.splice(index, 1);
                 document.querySelectorAll('.task')[index].remove();
