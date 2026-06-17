@@ -54,7 +54,8 @@
 
   @media (max-width: 440px) {
     .taskInputContainer {
-      max-width: 300px;
+      width: 70% !important;
+      min-width: none;
     }
     .tasksContainer {
       width: 330px;
