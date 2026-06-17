@@ -10,10 +10,12 @@ function chooseGreeting() {
   const hour = date.getHours();
   if (hour >= 5) {
     greeting = "Good Morning";
-    document.body.style.background = "linear-gradient(45deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%)";
+    document.body.style.background = "linear-gradient(135deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%)";
   }
-  if (hour > 12) {
+  if (hour >= 12) {
     greeting = "Good Afternoon"
+    document.body.style.background = "linear-gradient(180deg, #fada61 0.000%, #ff9188 50.000%, #ff5acd 100.000%)";
+
   }
   if (hour > 17) {
     greeting = "Good Evening";
