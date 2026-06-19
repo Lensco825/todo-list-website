@@ -11,14 +11,8 @@ body {
 
 body {
   padding-top: 30px;
-  /* background-color: #e5e5f7;
-  opacity: 0.9;
-  background-image: radial-gradient(#000000 1px, #e5e5f7 1px);
-  background-size: 20px 20px; */
-  /* https://grabient.com/HQVgzAHANKDsCcMQAYCMUC0rhldHs6GywATMvqvLDKajTgGxhSnCMQvKvDLwAsMXCCFoo2fqRFZQ8CEA?angle=225 */
-background-size: cover;
-background-repeat: no-repeat;
-background: linear-gradient(225deg, #abc8de 0.000%, #c7c9d8 16.667%, #e5cccf 33.333%, #ffd3c7 50.000%, #ffdbc2 66.667%, #ffe4c0 83.333%, #ffedc3 100.000%);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -36,12 +30,6 @@ background: linear-gradient(225deg, #abc8de 0.000%, #c7c9d8 16.667%, #e5cccf 33.
     inset 0 -1px 0 rgba(255, 255, 255, 0.1),
     inset 0 0 16px 8px rgba(255, 255, 255, 0.8);
 
-}
-
-
-:root {
-  --fallOrange: #DC965A;
-  --fallDarkBrown: #242325;
 }
 
 body {
@@ -82,9 +70,6 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-form {
   height: 100px;
 }
 
@@ -98,9 +83,6 @@ form #taskInput {
   border: solid 1px;
   margin-left: 15px;
   padding-left: 15px;
-}
-
-#taskInput {
   padding-right: 42px;
 }
 
@@ -158,15 +140,6 @@ label ion-icon {
   font-weight: light;
 }
 
-input[type="checkbox"] {
-  justify-self: flex-start;
-}
-
-.task label {
-  justify-self: flex-start;
-}
-
-
 .task {
   height: 60px;
   transition: 0.3s;
@@ -203,6 +176,7 @@ input[type="checkbox"] {
 .task input[type="checkbox"] {
   width: 50px;
   accent-color: #2293da;
+  justify-self: flex-start;
 }
 
 .task input[type="checkbox"]:checked + label {
@@ -214,6 +188,8 @@ input[type="checkbox"] {
   font-family: Playfair Display;
   font-size: 1.2rem;
   overflow-x: hidden;
+  justify-self: flex-start;
+
 }
 
 .deleteBtn {
