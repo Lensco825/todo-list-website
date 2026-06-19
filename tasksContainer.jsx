@@ -19,7 +19,7 @@ function chooseGreeting() {
   }
   if (hour > 17) {
     greeting = "Good Evening";
-    document.body.style.background = "linear-gradient(135deg, #4159d0 0.000%, #c84fc0 50.000%, #ffcd70 100.000%)";
+    document.body.style.background = "linear-gradient(65deg, #4159d0 0.000%, #c84fc0 50.000%, #ffcd70 100.000%)";
   }
 }
 
